@@ -1,0 +1,35 @@
+module purge
+module load Miniconda3
+which conda
+conda create -n ana_env python=3.11 numpy pandas scipy statsmodels scikit-learn -y
+
+
+#!/bin/bash
+#SBATCH --job-name=bootstrap_prueba
+#SBATCH --cpus-per-task=1
+#SBATCH --mem=16G
+#SBATCH --time=10:00:00
+#SBATCH --output=out.out
+#SBATCH --error=err.err
+
+module purge
+module load Miniconda3
+
+source $(conda info --base)/etc/profile.d/conda.sh
+conda activate ana_env
+
+which python
+python -v
+
+python boost_prueba.py
+
+
+SUBIR ARCHIVOS:
+
+PS C:\Users\anica\OneDrive\Escritorio\TFM> scp "C:\Users\anica\OneDrive\Escritorio\TFM\boostrapt\pkl\gam_original.pkl" acanoher@161.116.80.4:/home/acanoher/prueba_cluster/pkl/
+(acanoher@161.116.80.4) Password:
+gam_original.pkl                 100%   85KB   2.5MB/s   00:00
+
+
+VER CUANTA MEMORIA GASTA
+sstat -j 94519 --format=JobID,MaxRSS,AveCPU
