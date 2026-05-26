@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Network Tables</title>
+<style>
+  body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11pt;
+    background: white;
+    color: black;
+    padding: 30px;
+  }
+  table {
+    border-collapse: collapse;
+    width: auto;
+    margin-bottom: 36px;
+  }
+  th, td {
+    padding: 3px 9px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  th { font-size: 10pt; font-weight: bold; }
+  td { font-size: 10pt; }
+  .thead-top th { border-top: 1.5px solid black; }
+  .thead-sub th { border-bottom: 1px solid black; }
+  .row-last td { border-bottom: 1.5px solid black; }
+  .site-row td {
+    font-style: italic;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border-top: 0.5px solid #999;
+  }
+  td.multirow { vertical-align: middle; }
+</style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr class="thead-top">
+      <th rowspan="2" style="text-align:left">Snapshot<br>ID</th>
+      <th rowspan="2">Duration<br>(ka BP)</th>
+      <th rowspan="2">Fire</th>
+      <th colspan="2"><i>N</i></th>
+      <th colspan="2"><i>E</i></th>
+      <th colspan="2">⟨<i>k</i>⟩</th>
+      <th colspan="2">GCC (%)</th>
+      <th colspan="2"><i>f</i><sub>−</sub> (%)</th>
+    </tr>
+    <tr class="thead-sub">
+      <th>original</th><th>coarse</th>
+      <th>original</th><th>coarse</th>
+      <th>original</th><th>coarse</th>
+      <th>original</th><th>coarse</th>
+      <th>original</th><th>coarse</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="site-row"><td colspan="13"><i>Basa de la Mora</i></td></tr>
+
+    <tr>
+      <td>1</td><td>9.8 – 6.2</td><td>High</td>
+      <td rowspan="3" class="multirow">79</td>
+      <td rowspan="3" class="multirow">8</td>
+      <td>211</td><td>52</td>
+      <td>3.52</td><td>13.00</td>
+      <td>73.2</td><td rowspan="3" class="multirow">100</td>
+      <td>26.5</td><td>37.3</td>
+    </tr>
+    <tr>
+      <td>2</td><td>6.2 – 3.8</td><td>Low</td>
+      <td>92</td><td>33</td>
+      <td>1.84</td><td>8.25</td>
+      <td>57.3</td>
+      <td>41.3</td><td>43.8</td>
+    </tr>
+    <tr class="row-last">
+      <td>3</td><td>3.8 – Pres.</td><td>Medium</td>
+      <td>111</td><td>44</td>
+      <td>1.88</td><td>11.00</td>
+      <td>72.0</td>
+      <td>34.2</td><td>38.7</td>
+    </tr>
+
+    <tr class="site-row"><td colspan="13"><i>Garba Guracha</i></td></tr>
+
+    <tr>
+      <td>1</td><td>13.6 – 11.1</td><td>Low</td>
+      <td rowspan="4" class="multirow">83</td>
+      <td rowspan="4" class="multirow">8</td>
+      <td>77</td><td>26</td>
+      <td>0.93</td><td>7.43</td>
+      <td>47.0</td><td>87.5</td>
+      <td>48.1</td><td>53.8</td>
+    </tr>
+    <tr>
+      <td>2</td><td>11.1 – 6.8</td><td>High</td>
+      <td>203</td><td>40</td>
+      <td>2.45</td><td>10.00</td>
+      <td>75.9</td><td rowspan="3" class="multirow">100</td>
+      <td>22.2</td><td>37.5</td>
+    </tr>
+    <tr>
+      <td>3</td><td>6.8 – 2.2</td><td>Low</td>
+      <td>158</td><td>35</td>
+      <td>1.90</td><td>8.75</td>
+      <td>74.7</td>
+      <td>39.9</td><td>48.1</td>
+    </tr>
+    <tr class="row-last">
+      <td>4</td><td>2.2 – Pres.</td><td>High</td>
+      <td>182</td><td>43</td>
+      <td>2.19</td><td>10.75</td>
+      <td>83.1</td>
+      <td>28.0</td><td>43.3</td>
+    </tr>
+
+  </tbody>
+</table>
+
+</body>
+</html>
