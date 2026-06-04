@@ -5,12 +5,12 @@ conda create -n ana_env python=3.11 numpy pandas scipy statsmodels scikit-learn 
 
 
 #!/bin/bash
-#SBATCH --job-name=bootstrap_prueba
+#SBATCH --job-name=w3_sin_mult
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=16G
-#SBATCH --time=10:00:00
-#SBATCH --output=out.out
-#SBATCH --error=err.err
+#SBATCH --time=15:00:00
+#SBATCH --output=w3_sin_mult.out
+#SBATCH --error=w3_sin_mult.err
 
 module purge
 module load Miniconda3
@@ -21,7 +21,7 @@ conda activate ana_env
 which python
 python -v
 
-python boost_prueba.py
+time python w3_sin_mult.py
 
 
 SUBIR ARCHIVOS:
